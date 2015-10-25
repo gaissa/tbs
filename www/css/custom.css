@@ -13,10 +13,9 @@ html, body, #map-canvas {
 }
 
 #follow {
-
-   border-bottom-width:1px !important;
-   border-bottom-color:White !important;
-   border-bottom-style: solid !important;
+    border-bottom-width:1px !important;
+    border-bottom-color:White !important;
+    border-bottom-style: solid !important;
 }
 
 .ui-btn-inner {
@@ -28,7 +27,7 @@ html, body, #map-canvas {
     width: 96% !important;
     font-size: 0.6vw !important;
     white-space: normal !important;
-     /* margin-right: 1px !important;
+    /* margin-right: 1px !important;
     /* font-family: Tahoma, Geneva, sans-serif; */
 }
 
@@ -38,14 +37,11 @@ html, body, #map-canvas {
 }
 
 .ui-navbar li:last-child .ui-btn {
-
     margin-right: 0px !important;
 }
 
 .ui-loader .ui-icon-loading {
-
     border-radius: 0em !important;
-
 }
 
 .ui-panel {

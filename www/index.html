@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tampere Bus Stalker</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
+
+    <!-- import stylesheets (minified) -->
+    <link rel="stylesheet" type="text/css" href="lib/jquery.mobile.flatui.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- import jquery and jquery mobile (both minified) -->
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- import google maps v3 -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+
+    <!-- import phonegap/cordova -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+    <!-- import Tampere Bus Stalker scripts -->
+    <script src="js/getownlocation.js"></script>
+    <script src="js/gap.js"></script>
+
+  </head>
+  <body>
+
+  <script src="js/mapview.js"></script>
+
+    <div data-role="page" id="mainPage" data-theme="a">
+
+        <div data-role="popup" id="popup-prompt">
+
+            <label align="center"><h4>Really quit?</h4></label>
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#" data-theme="b" data-icon="check" id="quit-yes" data-role="button">Yes</a>
+                <a href="#" data-theme="b" data-icon="delete" data-iconpos="right" id="quit-no" data-role="button">No</a>
+            </div>
+
+        </div>
+
+        <div data-role="header" id="main_header" data-theme="a">
+
+            <h1 style="font-size: 25%;"></h1>
+            <h1 style="font-size: 75%;" id="h">&nbsp;</h1>
+            <a href="#nav-panel" id="nav" data-icon="bars" data-theme="b" data-iconpos="left">ADD LINE</a>
+            <a href="#" id="reset-nav" data-icon="delete"  data-theme="b" data-iconpos="right">RESET</a>
+
+        </div><!-- /header -->
+
+        <div data-role="content">
+
+        <!--<a href="#popupBasic" data-rel="popup">Open Popup</a>-->
+
+        <div data-role="popup" id="popupBasic">
+
+            <ul data-role="listview" data-inset="true" data-theme="a">
+
+                <li data-theme="b data-icon="check"><a href="#" id="follow">follow</a></li>
+                <li data-theme="f data-icon="check"><a href="#" id="timetable">timetable</a></li>
+                <li data-role="divider" id="popupText" data-theme="a"></li>
+                <li data-role="divider" id="popupText2" data-theme="a"></li>
+                <li data-role="divider" id="popupText3" data-theme="a"></li>
+                <li data-icon="delete"><a href="#" id="del">delete</a></li>
+
+            </ul>
+
+        </div>
+
+        <div id="map-canvas" style="width:100%;"></div>
+
+        </div><!-- /content -->
+
+        <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+
+            <a data-rel="close" data-theme="a" data-mini="true" data-role="button">CLOSE</a>
+
+            <div id="grid" class="" align="center">
+
+                <div id="tempgrid1" class="ui-block-a"></div>
+                <div id="tempgrid2" class="ui-block-b"></div>
+                <div id="tempgrid3" class="ui-block-c"></div>
+                <div id="tempgrid4" class="ui-block-d"></div>
+                <div id="tempgrid5" class="ui-block-e"></div>
+
+            </div><!-- /grid -->
+
+            <p id="info"></p>
+
+        </div><!-- /panel -->
+
+        <div data-role="footer" id="main_footer">
+        <div data-role="navbar">
+            <ul>
+                <!-- <li><a href="#">Help</a></li> -->
+                <li><a href="#aboutPage">INFO</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        <div id="bottom"></div>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+        <div data-theme="a" data-role="page" id="timetablePage" data-add-back-btn="true" data-back-btn-text="BACK">
+
+        <div data-role="header" id="timetables_header" data-theme="a" >
+
+            <h1></h1>
+
+        </div><!-- /header -->
+
+        <div data-role="content">
+
+        </div>
+
+        </div><!-- /page -->
+
+        <div data-theme="a" data-role="page" id="aboutPage" >
+
+        <div data-role="header" id="settings_header" data-theme="a" data-add-back-btn="true" data-back-btn-text="BACK" data-back-btn-theme="b" >
+
+            <h1></h1>
+
+        </div><!-- /header -->
+
+    <div data-role="content">
+
+        <ul data-role="listview" data-inset="true">
+
+            <li data-theme="f" data-role="list-divider">TAMPERE BUS STALKER</li>
+            <li>
+                <h2>Author</h2>
+                <p>Janne Kähkönen</p>
+                <h2>Version</h2>
+                <p>1.0.3</p>
+            </li>
+
+            <li data-theme="a" data-role="list-divider">controls</li>
+            <li>
+                <h2>Add line</h2>
+                <p>add a bus line to the map</p>
+                <h2>Reset</h2>
+                <p>reset all the bus lines </p>
+                <h2>Tap on a bus</h2>
+                <p>open the bus menu pop up</p>
+            </li>
+
+            <li data-theme="a" data-role="list-divider">info</li>
+            <li>
+                <p>The data is provided by <br> Tampere Public Transport SIRI Interface <br> and is still in beta phase</p>
+            </li>
+
+             <li data-theme="h" data-role="list-divider">changelog</li>
+            <li>
+                <p>...</p>
+            </li>
+
+        </ul>
+
+    </div>
+
+    </div><!-- /page -->
+
+</body>
+</html>

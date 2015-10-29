@@ -25,15 +25,18 @@ html, body, #map-canvas {
 
 .wrapper {
     width: 96% !important;
-    font-size: 0.6vw !important;
+    font-size: 0.8vw !important;
     white-space: normal !important;
     /* margin-right: 1px !important;
     /* font-family: Tahoma, Geneva, sans-serif; */
+
 }
 
 .b.ui-btn {
     width: 100% !important;
-    font-size: 8px !important;
+    font-size: 0.8vw !important;
+    padding-top: 10% !important;
+    padding-bottom: 10% !important;
 }
 
 .ui-navbar li:last-child .ui-btn {
@@ -46,6 +49,7 @@ html, body, #map-canvas {
 
 .ui-panel {
     width: 100%;
+    overflow-x: !important;
 }
 
 .ui-panel.ui-panel-position-right {

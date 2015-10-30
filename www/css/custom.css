@@ -25,7 +25,7 @@ html, body, #map-canvas {
 
 .wrapper {
     width: 96% !important;
-    font-size: 0.8vw !important;
+    font-size: 84% !important;
     white-space: normal !important;
     /* margin-right: 1px !important;
     /* font-family: Tahoma, Geneva, sans-serif; */
@@ -34,9 +34,9 @@ html, body, #map-canvas {
 
 .b.ui-btn {
     width: 100% !important;
-    font-size: 0.8vw !important;
-    padding-top: 10% !important;
-    padding-bottom: 10% !important;
+    font-size: 84% !important;
+    padding-top: 8% !important;
+    padding-bottom: 8% !important;
 }
 
 .ui-navbar li:last-child .ui-btn {

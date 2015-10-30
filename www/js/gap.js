@@ -25,7 +25,7 @@ var app = {
         /*jslint browser: true*/
 
         app.receivedEvent('deviceready');
-        
+
         // Check the user location to warm up the GPS :)
         getOwnLocation();
 

@@ -39,16 +39,21 @@ var main = function() {
             Start;
 
         // Prevent pinch zoom.
-       // tblock = function (e) {
-
+        //tblock = function (e) {
             //if (e.touches.length > 1) {
-                //e.preventDefault();
+            //e.preventDefault();
             //}
             //return false;
         //};
 
         // Add the touch listener.
         //document.body.addEventListener("touchmove", tblock, true);
+
+       $(".ui-panel").on('touchmove', function(ev) {
+            if (!jQuery( ev.target ).parents().hasClass( 'touch-moveable' )) {
+                 ev.preventDefault();
+            }
+        });
 
         // Get the menu heights.
         mh = parseInt($("#main_header").css("height"), 10);
@@ -145,7 +150,7 @@ var main = function() {
 
                     if (check === true) {
 
-                        $("#h").text("removing line(s)");
+                        //$("#h").text("removing line(s)");
                     }
                 }
 
@@ -483,31 +488,31 @@ var main = function() {
                                + '</button></div>';
 
 
-                        if (i < 12) {
+                        if (i < 11) {
                             $("#grid").attr("class", "ui-grid-solo");
                             $('#grid').append('<div id="tempgrid1" class="ui-block-a"></div>').trigger('create');
                             $('#tempgrid1').append(html).trigger('create');
                         }
 
-                        if (i > 11 && i < 24) {
+                        if (i > 10 && i < 22) {
                             $("#grid").attr("class", "ui-grid-a");
                             $('#grid').append('<div id="tempgrid2" class="ui-block-b"></div>').trigger('create');
                             $('#tempgrid2').append(html).trigger('create');
                         }
 
-                        if (i > 23 && i < 36) {
+                        if (i > 21 && i < 33) {
                             $("#grid").attr("class", "ui-grid-b");
                             $('#grid').append('<div id="tempgrid3" class="ui-block-c"></div>').trigger('create');
                             $('#tempgrid3').append(html).trigger('create');
                         }
 
-                        if (i > 35 && i < 48) {
+                        if (i > 32 && i < 44) {
                             $("#grid").attr("class", "ui-grid-c");
                             $('#grid').append('<div id="tempgrid4" class="ui-block-d"></div>').trigger('create');
                             $('#tempgrid4').append(html).trigger('create');
                         }
 
-                        if (i > 47 && i < unique.length) {
+                        if (i > 43 && i < unique.length) {
                             $("#grid").attr("class", "ui-grid-d");
                             $('#grid').append('<div id="tempgrid5" class="ui-block-e"></div>').trigger('create');
                             $('#tempgrid5').append(html).trigger('create');

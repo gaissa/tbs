@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="fi.kahkonen.tamperebusstalker" version="1.0.5" versionCode="10005" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="fi.kahkonen.tamperebusstalker" version="1.0.6" versionCode="10006" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tampere Bus Stalker</name>
     <description>Tampere Bus Stalker.</description>
     <author email="jannekahkonen@gmail.com" href="https://gaissa.github.io">Janne Kahkonen</author>

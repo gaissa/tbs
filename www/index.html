@@ -30,6 +30,7 @@
 
   <script src="js/mapview.js"></script>
 
+    <!-- MAIN PAGE -->
     <div data-role="page" id="mainPage" data-theme="a">
 
         <div data-role="popup" id="popup-prompt">
@@ -44,8 +45,7 @@
 
         <div data-role="header" id="main_header" data-theme="a">
 
-            <h1 style="font-size: 25%;"></h1>
-            <h1 style="font-size: 75%;" id="h">&nbsp;</h1>
+            <h1></h1>
             <a href="#nav-panel" id="nav" data-icon="bars" data-theme="b" data-iconpos="left">ADD LINE</a>
             <a href="#" id="reset-nav" data-icon="delete"  data-theme="b" data-iconpos="right">RESET</a>
 
@@ -104,21 +104,9 @@
 
     </div><!-- /page -->
 
-        <div data-theme="a" data-role="page" id="timetablePage" data-add-back-btn="true" data-back-btn-text="BACK">
 
-        <div data-role="header" id="timetables_header" data-theme="a" >
-
-            <h1></h1>
-
-        </div><!-- /header -->
-
-        <div data-role="content">
-
-        </div>
-
-        </div><!-- /page -->
-
-        <div data-theme="a" data-role="page" id="aboutPage" >
+    <!-- INFO PAGE -->
+    <div data-theme="a" data-role="page" id="aboutPage" >
 
         <div data-role="header" id="settings_header" data-theme="a" data-add-back-btn="true" data-back-btn-text="BACK" data-back-btn-theme="b" >
 
@@ -126,41 +114,41 @@
 
         </div><!-- /header -->
 
-    <div data-role="content">
+        <div data-role="content">
 
-        <ul data-role="listview" data-inset="true">
+            <ul data-role="listview" data-inset="true">
 
-            <li data-theme="f" data-role="list-divider">TAMPERE BUS STALKER</li>
-            <li>
-                <h2>Author</h2>
-                <p>Janne Kähkönen</p>
-                <h2>Version</h2>
-                <p>1.0.5</p>
-            </li>
+                <li data-theme="f" data-role="list-divider">TAMPERE BUS STALKER</li>
+                <li>
+                    <h2>Author</h2>
+                    <p>Janne Kähkönen</p>
+                    <h2>Version</h2>
+                    <p>1.0.6</p>
+                </li>
 
-            <li data-theme="a" data-role="list-divider">controls</li>
-            <li>
-                <h2>Add line</h2>
-                <p>add a bus line to the map</p>
-                <h2>Reset</h2>
-                <p>reset all the bus lines </p>
-                <h2>Tap on a bus</h2>
-                <p>open the bus menu pop up</p>
-            </li>
+                <li data-theme="a" data-role="list-divider">controls</li>
+                <li>
+                    <h2>Add line</h2>
+                    <p>add a bus line to the map</p>
+                    <h2>Reset</h2>
+                    <p>reset all the bus lines </p>
+                    <h2>Tap on a bus</h2>
+                    <p>open the bus menu pop up</p>
+                </li>
 
-            <li data-theme="a" data-role="list-divider">info</li>
-            <li>
-                <p>The data is provided by <br> Tampere Public Transport SIRI Interface <br> and is still in beta phase</p>
-            </li>
+                <li data-theme="a" data-role="list-divider">info</li>
+                <li>
+                    <p>The data is provided by <br> Tampere Public Transport SIRI Interface <br> and is still in beta phase</p>
+                </li>
 
-            <!-- <li data-theme="h" data-role="list-divider">changelog</li>
-            <li>
-                <p>...</p>
-            </li> -->
+                <!-- <li data-theme="h" data-role="list-divider">changelog</li>
+                <li>
+                    <p>...</p>
+                </li> -->
 
-        </ul>
+            </ul>
 
-    </div>
+        </div>
 
     </div><!-- /page -->
 
